@@ -1,0 +1,26 @@
+import random
+computer=random.choice([-1,0,1])
+print("This is a snake water gun  game!")
+youdict={"s":1,"w":-1,"g":0}
+you=input("Enter your choice s,w or g")
+youstr=youdict[you]
+revdict={1:"Snake",-1:"Water",0:"Gun"}
+print(f"You chose {revdict[youstr]}\ncomputer chose {revdict[computer]}")
+if(computer==youstr):
+    print("It's a draw")
+else:
+    if(youstr==1 and computer==-1): #y=snake and c=water
+        print("You win!")
+    elif(youstr==1 and computer==0):
+        print("You lose")
+    elif(youstr==0 and computer==-1): #u=gun and c=water
+        print("You lose")
+    elif(youstr==0 and computer==1):
+        print("You win!")
+    elif(youstr==-1 and computer==0):
+        print("You win!")
+    elif(youstr==-1 and computer==1):
+        print("You lose!")
+    else:
+        print("Something went wrong")
+   
